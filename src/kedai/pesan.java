@@ -60,6 +60,7 @@ public class pesan extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,7 +82,7 @@ public class pesan extends javax.swing.JFrame {
 
         save.setFont(new java.awt.Font("squeaky chalk sound", 1, 14)); // NOI18N
         save.setForeground(new java.awt.Color(255, 255, 255));
-        save.setText("Next");
+        save.setText("save");
         save.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 saveMouseClicked(evt);
@@ -127,6 +128,10 @@ public class pesan extends javax.swing.JFrame {
 
         kGradientPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, 90));
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("delete");
+        kGradientPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -165,7 +170,7 @@ public class pesan extends javax.swing.JFrame {
             stat.executeUpdate(sql);
             //new pesanan().show(true);
             
-            //JOptionPane.showMessageDialog(null,"saved");
+            JOptionPane.showMessageDialog(null,"saved");
             name.setText("");
             
         }catch (Exception e){
@@ -215,6 +220,7 @@ public class pesan extends javax.swing.JFrame {
     private java.util.List<kedai.Customer_1> customer_1List;
     private javax.persistence.Query customer_1Query;
     private javax.persistence.EntityManager db_javaPUEntityManager;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
